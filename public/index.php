@@ -27,7 +27,7 @@ switch($resource) {
         break;
     
     case 'discentes':
-        echo "DISCENTES PAGE";
+        // echo "DISCENTES PAGE";
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
@@ -35,7 +35,7 @@ switch($resource) {
         break;
     
     case 'apoyos':
-        echo "APOYOS PAGE";
+        // echo "APOYOS PAGE";
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
@@ -43,7 +43,7 @@ switch($resource) {
         break;
     
     case 'pc':
-        echo "PC PAGE";
+        // echo "PC PAGE";
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
