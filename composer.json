@@ -1,0 +1,19 @@
+{
+    "name": "chris/sirecom",
+    "description": "Resgistro de PC's",
+    "type": "project",
+    "authors": [
+        {
+            "name": "chirs",
+            "email": "yosoypro_117@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\": "database/",
+            "Router\\": "router/"
+        }
+    },
+    "require": {}
+}
