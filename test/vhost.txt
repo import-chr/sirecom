@@ -1,0 +1,19 @@
+ABILITAR REWRITE
+
+cd /etc/apache2/sites-available
+cp 000-default.conf sirecom.conf
+systemctl restart apache2
+vim /etc/hosts
+a2ensite sirecom.conf
+systemctl reload apache2
+
+SEÑALAR DIRECTORIO DE REWRITE
+
+vim /etc/apache2/apache2.conf
+
+== entrada ==
+<Directory /var/www/html/sirecom/>
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
+</Directory>
