@@ -7,9 +7,9 @@ use App\Controllers\DiscentesController;
 $discente_controller = new DiscentesController();
 
 $discente_controller->store([
-    "matricula" => "D-2336985",
-    "nombre" => "Francisco",
-    "apellido" => "Medina"
+    "matricula" => "D-8445574",
+    "nombre" => "Yael",
+    "apellido" => "Salgado"
 ]);
 
 // $discente_controller->index();
