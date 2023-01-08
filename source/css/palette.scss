@@ -1,0 +1,47 @@
+/* Coolors Exported Palette - https://coolors.co/00296b-003f88-00509d-fdc500-ffd500 */
+
+/* CSS HEX */
+// --royal-blue-dark: #00296bff;
+// --dark-cornflower-blue: #003f88ff;
+// --usafa-blue: #00509dff;
+// --golden-poppy: #fdc500ff;
+// --gold-web-golden: #ffd500ff;
+
+/* CSS HSL */
+// --royal-blue-dark: hsla(217, 100%, 21%, 1);
+// --dark-cornflower-blue: hsla(212, 100%, 27%, 1);
+// --usafa-blue: hsla(209, 100%, 31%, 1);
+// --golden-poppy: hsla(47, 100%, 50%, 1);
+// --gold-web-golden: hsla(50, 100%, 50%, 1);
+
+/* SCSS HEX */
+$royal-blue-dark: #00296bff;
+$dark-cornflower-blue: #003f88ff;
+$usafa-blue: #00509dff;
+$golden-poppy: #fdc500ff;
+$gold-web-golden: #ffd500ff;
+
+/* SCSS HSL */
+$royal-blue-dark: hsla(217, 100%, 21%, 1);
+$dark-cornflower-blue: hsla(212, 100%, 27%, 1);
+$usafa-blue: hsla(209, 100%, 31%, 1);
+$golden-poppy: hsla(47, 100%, 50%, 1);
+$gold-web-golden: hsla(50, 100%, 50%, 1);
+
+/* SCSS RGB */
+$royal-blue-dark: rgba(0, 41, 107, 1);
+$dark-cornflower-blue: rgba(0, 63, 136, 1);
+$usafa-blue: rgba(0, 80, 157, 1);
+$golden-poppy: rgba(253, 197, 0, 1);
+$gold-web-golden: rgba(255, 213, 0, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-right: linear-gradient(90deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-bottom: linear-gradient(180deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-left: linear-gradient(270deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-top-right: linear-gradient(45deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-bottom-right: linear-gradient(135deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-top-left: linear-gradient(225deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-bottom-left: linear-gradient(315deg, #00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
+$gradient-radial: radial-gradient(#00296bff, #003f88ff, #00509dff, #fdc500ff, #ffd500ff);
