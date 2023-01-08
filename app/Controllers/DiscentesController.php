@@ -19,7 +19,7 @@ class DiscentesController implements Controller {
         $query->execute();
 
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
-        // var_dump($results);
+        var_dump($results);
 
         require("../source/views/discentes/index.php");
     }
