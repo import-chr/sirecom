@@ -10,9 +10,9 @@ use Router\RouterHandler;
 $slug = $_GET["slug"] ?? "";
 $slug = explode("/", $slug);
 
-echo "<pre>";
-var_dump($slug);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($slug);
+// echo "</pre>";
 
 $resource = $slug[0] == "" ? "/" : $slug[0];
 // $id hace referencia a pk
