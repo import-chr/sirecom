@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Database\PDO\Connection;
+use Database\PdoC\Connection;
 use App\Interface\Controller;
 use PDO;
 
