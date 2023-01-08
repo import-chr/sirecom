@@ -1,7 +1,7 @@
 <?php
 
-namespace Database\PDO;
-
+namespace Database\PdoC;
+use PDO;
 use PDOException;
 
 class Connection {
@@ -48,7 +48,7 @@ class Connection {
      */
     private function make_connection() {
         try {
-            $connect = new \PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
+            $connect = new PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
 
             $setnames = $connect->prepare("SET NAMES 'utf8'");
             $setnames->execute();

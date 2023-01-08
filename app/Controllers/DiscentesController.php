@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Interface\Controller;
-use Database\PDO\Connection;
+use Database\PdoC\Connection;
 use PDO;
 
 class DiscentesController implements Controller {
