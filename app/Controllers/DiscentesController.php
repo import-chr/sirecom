@@ -9,7 +9,12 @@ use PDO;
 class DiscentesController implements Controller {
 
     private $connection;
-
+    
+    /**
+     * __construct
+     *
+     * @return void
+     */
     public function __construct() {
         $this->connection = Connection::getInstance()->getDatabase();
     }
