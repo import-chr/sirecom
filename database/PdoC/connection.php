@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\PdoC;
+
 use PDO;
 use PDOException;
 
@@ -27,8 +28,9 @@ class Connection {
      * @return self
      */
     public static function getInstance() {
-        if (!self::$instance instanceof self)
+        if (!self::$instance instanceof self) {
             self::$instance = new self();
+        }
 
         return self::$instance;
     }
@@ -62,3 +64,5 @@ class Connection {
     }
 
 }
+
+?>
