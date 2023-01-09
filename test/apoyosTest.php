@@ -7,8 +7,8 @@ use App\Controllers\ApoyosController;
 $apoyos_controller = new ApoyosController;
 
 $apoyos_controller->store([
-    "matricula" => "A-10085643",
-    "nombre" => "Paola",
+    "matricula" => "A-10063594",
+    "nombre" => "Petra",
     "apellido" => "Hernandez"
 ]);
 

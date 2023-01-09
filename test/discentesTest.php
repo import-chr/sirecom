@@ -23,3 +23,5 @@ $discente_controller->store([
 // ], "D-7334463");
 
 // $discente_controller->destroy("D-1234567");
+
+?>
