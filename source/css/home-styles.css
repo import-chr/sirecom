@@ -1,0 +1,107 @@
+:root {
+    --yale-blue: #034c8cff;
+    --bluetiful: #056cf2ff;
+    --azure: #0583f2ff;
+    --harvest-gold: #d9961aff;
+    --goldenrod: #d9a714ff;
+    --cultured: #ecececff;
+
+    --royal-blue-dark: #00296bff;
+    --dark-cornflower-blue: #003f88ff;
+    --usafa-blue: #00509dff;
+    --golden-poppy: #fdc500ff;
+    --gold-web-golden: #ffd500ff;
+
+    --good-green: #009879;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--cultured);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 45px 623px 45px;
+    grid-template-areas: 
+        "header header header header"
+        "title main main main"
+        "footer footer footer footer";
+}
+
+.mid-container:nth-child(1) {
+    grid-area: header;
+}
+
+.mid-container:nth-child(2) {
+    grid-area: title;
+}
+
+.mid-container:nth-child(3) {
+    grid-area: main;
+}
+
+.mid-container:nth-child(4) {
+    grid-area: footer;
+}
+
+div.sub-header h1 {
+    font-size: 4.35rem;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+#title > h1 {
+    color: var(--good-green);
+}
+
+.ref-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+div.sub-ref {
+    display: flex;
+    height: 30%;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.linker {
+    height: 100%;
+    margin: 0;
+    padding: 0 40px 0 40px;
+    text-decoration: none;
+    color: grey;
+}
+
+.linker > p {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.linker > i {
+    font-size: 7em;
+}
+
+.linker:hover {
+    color: var(--good-green);
+}
+
+div.sub-ref:hover {
+    border-color: var(--good-green);
+    background-color: var(--cultured);
+}
