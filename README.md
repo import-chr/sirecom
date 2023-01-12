@@ -3,6 +3,8 @@
 
 Proyecto de trabajo con bases de datos (mariaDB) y PHP
 
+> Git Branch xampp-host
+
 Registro de equipo personales:
 
  - Computadoras

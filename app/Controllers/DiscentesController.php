@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Interface\Controller;
-use Database\PdoC\Connection;
+use Database\PDO\Connection;
 use PDO;
 
 class DiscentesController implements Controller {
@@ -77,5 +77,3 @@ class DiscentesController implements Controller {
     }
 
 }
-
-?>
