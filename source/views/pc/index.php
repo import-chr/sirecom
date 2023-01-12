@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../source/css/tables-style.css">
+    <link rel="stylesheet" href="../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Computadoras</title>
 </head>
 <body>
@@ -24,6 +25,7 @@
                     <th>Modelo</th>
                     <!-- <tr>Fecha de Registro</tr> -->
                     <th>Matrícula Personal</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +41,7 @@
                         <td><?= $result["modelo"] ?></td>
                         <!-- <td><?= $result["fecha_registro"] ?></td> -->
                         <td><?= $result["apoyos_matricula"] ?></td>
+                        <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

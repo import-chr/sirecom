@@ -74,6 +74,8 @@ class DiscentesController implements Controller {
         $query->execute([
             ":matricula" => $pk
         ]);
+
+        header("location: ../../discentes");
     }
 
 }

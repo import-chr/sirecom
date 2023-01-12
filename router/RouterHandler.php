@@ -15,13 +15,16 @@ class RouterHandler {
         $this->data = $data;
     }
 
-    public function route($controller, $id) {
+    public function route($controller, $id, $res) {
         $resource = new $controller();
 
         switch ($this->method) {
             case "get":
                 if($id && $id == 'create') {
                     $resource->create();
+                }
+                else if($id && $id == 'delete') {
+                    $resource->destroy($res);
                 }
                 else if($id) {
                     $resource->show($id);
@@ -35,9 +38,9 @@ class RouterHandler {
                 $resource->store($this->data);
                 break;
 
-            case "delete":
-                $resource->destroy($id);
-                break;
+            // case "delete":
+            //     $resource->destroy($id);
+            //     break;
         }
     }
 

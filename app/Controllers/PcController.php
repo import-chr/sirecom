@@ -88,6 +88,8 @@ class PcController implements Controller {
         $query->execute([
             ":pk" => $pk
         ]);
+
+        header("location: ../../pc");
     }
 
 }

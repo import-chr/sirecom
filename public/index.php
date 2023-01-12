@@ -17,6 +17,7 @@ $slug = explode("/", $slug);
 $resource = $slug[0] == "" ? "/" : $slug[0];
 // $id hace referencia a pk
 $id = $slug[1] ?? null;
+$res = $slug[2] ?? null;
 
 $router = new RouterHandler;
 
@@ -31,7 +32,7 @@ switch($resource) {
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
-        $router->route(DiscentesController::class, $id);
+        $router->route(DiscentesController::class, $id, $res);
         break;
     
     case 'apoyos':
@@ -39,7 +40,7 @@ switch($resource) {
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
-        $router->route(ApoyosController::class, $id);
+        $router->route(ApoyosController::class, $id, $res);
         break;
     
     case 'pc':
@@ -47,5 +48,5 @@ switch($resource) {
         $method = $_POST["method"] ?? "get";
         $router->set_method($method);
         $router->set_data($_POST);
-        $router->route(PcController::class, $id);
+        $router->route(PcController::class, $id, $res);
 }

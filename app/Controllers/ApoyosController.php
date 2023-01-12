@@ -72,5 +72,7 @@ class ApoyosController implements Controller {
         $query->execute([
             ":matricula" => $pk
         ]);
+
+        header("location: ../../apoyos");
     }
 }
