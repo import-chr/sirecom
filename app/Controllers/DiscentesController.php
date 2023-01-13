@@ -41,12 +41,22 @@ class DiscentesController implements Controller {
     }
 
     public function show($pk) {
-        $query = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        // $query = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+
+        $query = $this->connection->prepare("SELECT *
+                                            FROM pc, discentes
+                                            WHERE pc.discente_matricula = discentes.matricula
+                                            AND pc.discente_matricula IN (
+                                                SELECT matricula
+                                                FROM discentes
+                                                WHERE matricula = :matricula)");
         $query->execute([
             ":matricula" => $pk
         ]);
 
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        require("../source/views/discentes/show.php");
 
         // var_dump($result);
     }
