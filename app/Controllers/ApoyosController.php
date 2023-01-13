@@ -40,13 +40,25 @@ class ApoyosController implements Controller {
     }
 
     public function show($pk) {
-        $query = $this->connection->prepare("SELECT * FROM apoyos_didacticos WHERE matricula = :matricula");
+        // $query = $this->connection->prepare("SELECT * FROM apoyos_didacticos WHERE matricula = :matricula");
+        // $query->execute([
+        //     ":matricula" => $pk
+        // ]);
+
+        $query = $this->connection->prepare("SELECT *, apoyos_didacticos.nombre FROM pc
+                                            WHERE pc.apoyos_matricula IN (
+                                                                        SELECT matricula
+                                                                        FROM apoyos_didacticos
+                                                                        WHERE matricula = :matricula)");
         $query->execute([
             ":matricula" => $pk
         ]);
 
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-        // var_dump($result);
+
+        echo "<pre>";
+        var_dump($result);
+        echo "</pre>";
     }
 
     public function edit() {
