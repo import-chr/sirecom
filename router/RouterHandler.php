@@ -26,8 +26,8 @@ class RouterHandler {
                 else if($id && $id == 'delete') {
                     $resource->destroy($res);
                 }
-                else if($id) {
-                    $resource->show($id);
+                else if($id && $id == 'show') {
+                    $resource->show($res);
                 }
                 else {
                     $resource->index();
