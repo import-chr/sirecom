@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../source/css/tables-style.css">
-    <link rel="stylesheet" href="../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="../../../source/css/tables-style.css">
+    <link rel="stylesheet" href="../../../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Personal</title>
 </head>
 <body>
     <div class="container">
-        <h1></h1>
+        <h1>
+            Computadoras Registradas por
+            <?= $result[0]["nombre"] ?>
+        </h1>
 
         <table class="content-table">
             <thead>
@@ -29,26 +32,23 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($results as $result): ?>
+                <?php foreach ($result as $res): ?>
                     <tr>
-                        <td><?= $result["pc_id"] ?></td>
-                        <td><?= $result["discente_matricula"] ?></td>
-                        <td><?= $result["direccion_MAC"] ?></td>
-                        <td><?= $result["sistema_operativo"] ?></td>
-                        <td><?= $result["procesador"] ?></td>
-                        <td><?= $result["memoria_RAM"] ?></td>
-                        <td><?= $result["marca"] ?></td>
-                        <td><?= $result["modelo"] ?></td>
-                        <!-- <td><?= $result["fecha_registro"] ?></td> -->
-                        <td><?= $result["apoyos_matricula"] ?></td>
-                        <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
+                        <td><?= $res["pc_id"] ?></td>
+                        <td><?= $res["discente_matricula"] ?></td>
+                        <td><?= $res["direccion_MAC"] ?></td>
+                        <td><?= $res["sistema_operativo"] ?></td>
+                        <td><?= $res["procesador"] ?></td>
+                        <td><?= $res["memoria_RAM"] ?></td>
+                        <td><?= $res["marca"] ?></td>
+                        <td><?= $res["modelo"] ?></td>
+                        <!-- <td><?= $res["fecha_registro"] ?></td> -->
+                        <td><?= $res["apoyos_matricula"] ?></td>
+                        <td><a class="trash" href="pc/delete/<?= $res["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <a class="url-register" href="pc/create">Nueva Computadora</a>
     </div>
-    <script src="../source/js/delete-alert.js"></script>
 </body>
 </html>
