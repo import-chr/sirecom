@@ -37,10 +37,6 @@ class RouterHandler {
             case "post":
                 $resource->store($this->data);
                 break;
-
-            // case "delete":
-            //     $resource->destroy($id);
-            //     break;
         }
     }
 
