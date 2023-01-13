@@ -12,6 +12,7 @@
     <div class="container">
         <h1>
             <?= $result[0]["nombre"] ?>
+            <?= $result[0]["apellido"] ?>
         </h1>
 
         <h4>
