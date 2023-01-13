@@ -49,5 +49,6 @@
 
         <a class="url-register" href="pc/create">Nueva Computadora</a>
     </div>
+    <script src="../source/js/delete-alert.js"></script>
 </body>
 </html>

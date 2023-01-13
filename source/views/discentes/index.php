@@ -35,5 +35,6 @@
 
         <a class="url-register" href="discentes/create">Nuevo Discente</a>
     </div>
+    <script src="../source/js/delete-alert.js"></script>
 </body>
 </html>
