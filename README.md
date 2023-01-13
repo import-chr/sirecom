@@ -3,7 +3,7 @@
 
 Proyecto de trabajo con bases de datos (mariaDB) y PHP
 
-> Git Branch xampp-host
+> Main Branch using xampp-host
 
 Registro de equipo personales:
 
