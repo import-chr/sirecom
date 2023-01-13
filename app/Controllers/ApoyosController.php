@@ -45,11 +45,14 @@ class ApoyosController implements Controller {
         //     ":matricula" => $pk
         // ]);
 
-        $query = $this->connection->prepare("SELECT *, apoyos_didacticos.nombre FROM pc
+        $query = $this->connection->prepare("SELECT *, apoyos_didacticos.nombre
+                                            FROM pc
+                                            INNER JOIN apoyos_didacticos
+                                            ON pc.apoyos_matricula = apoyos_didacticos.matricula
                                             WHERE pc.apoyos_matricula IN (
-                                                                        SELECT matricula
-                                                                        FROM apoyos_didacticos
-                                                                        WHERE matricula = :matricula)");
+                                                SELECT matricula
+                                                FROM apoyos_didacticos
+                                                WHERE matricula = :matricula)");
         $query->execute([
             ":matricula" => $pk
         ]);
