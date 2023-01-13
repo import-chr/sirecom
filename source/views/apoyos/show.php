@@ -11,9 +11,12 @@
 <body>
     <div class="container">
         <h1>
-            Computadoras Registradas por
             <?= $result[0]["nombre"] ?>
         </h1>
+
+        <h4>
+            <?= $result[0]["apoyos_matricula"] ?>
+        </h4>
 
         <table class="content-table">
             <thead>
@@ -27,7 +30,6 @@
                     <th>Marca</th>
                     <th>Modelo</th>
                     <!-- <tr>Fecha de Registro</tr> -->
-                    <th>Matrícula Personal</th>
                     <th></th>
                 </tr>
             </thead>
@@ -43,7 +45,6 @@
                         <td><?= $res["marca"] ?></td>
                         <td><?= $res["modelo"] ?></td>
                         <!-- <td><?= $res["fecha_registro"] ?></td> -->
-                        <td><?= $res["apoyos_matricula"] ?></td>
                         <td><a class="trash" href="pc/delete/<?= $res["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
