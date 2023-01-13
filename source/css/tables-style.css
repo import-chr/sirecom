@@ -7,8 +7,8 @@ body {
     background-color: var(--cultured);
 }
 
-a, a.trash {
-    text-decoration: none !important;
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -64,6 +64,13 @@ a, a.trash {
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+.content-table tbody tr:hover{
+    font-weight: bold;
+    color: #009879;
+    /* color: #fff; */
+    /* background-color: #009879; */
 }
 
 .url-register {
