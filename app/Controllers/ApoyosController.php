@@ -59,9 +59,11 @@ class ApoyosController implements Controller {
 
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        echo "<pre>";
-        var_dump($result);
-        echo "</pre>";
+        require("../source/views/apoyos/show.php");
+
+        // echo "<pre>";
+        // var_dump($result);
+        // echo "</pre>";
     }
 
     public function edit() {
