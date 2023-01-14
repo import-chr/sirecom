@@ -40,6 +40,10 @@ a {
     padding: 12px 15px;
 }
 
+td[data-href] {
+    cursor: pointer;
+}
+
 .content-table tbody tr {
     text-align: center;
     border-bottom: 1px solid #dddddd;
