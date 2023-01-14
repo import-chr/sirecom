@@ -65,7 +65,7 @@ class DiscentesController implements Controller {
         // var_dump($result);
     }
 
-    public function edit() {
+    public function edit($pk) {
     }
 
     public function update($data, $pk) {
