@@ -40,10 +40,10 @@ class ApoyosController implements Controller {
     }
 
     public function show($pk) {
-        // $query = $this->connection->prepare("SELECT * FROM apoyos_didacticos WHERE matricula = :matricula");
-        // $query->execute([
-        //     ":matricula" => $pk
-        // ]);
+        $query_null = $this->connection->prepare("SELECT * FROM apoyos_didacticos WHERE matricula = :matricula");
+        $query_null->execute([
+            ":matricula" => $pk
+        ]);
 
         // $query = $this->connection->prepare("SELECT *
         //                                     FROM pc
@@ -65,12 +65,13 @@ class ApoyosController implements Controller {
             ":matricula" => $pk
         ]);
 
+        $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         require("../source/views/apoyos/show.php");
 
         // echo "<pre>";
-        // var_dump($result);
+        // var_dump($result_null);
         // echo "</pre>";
     }
 

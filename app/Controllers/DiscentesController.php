@@ -41,7 +41,10 @@ class DiscentesController implements Controller {
     }
 
     public function show($pk) {
-        // $query = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        $query_null = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        $query_null->execute([
+            ":matricula" => $pk
+        ]);
 
         $query = $this->connection->prepare("SELECT *
                                             FROM pc, discentes
@@ -54,6 +57,7 @@ class DiscentesController implements Controller {
             ":matricula" => $pk
         ]);
 
+        $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         require("../source/views/discentes/show.php");
