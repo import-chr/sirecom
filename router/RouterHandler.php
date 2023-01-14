@@ -18,7 +18,7 @@ class RouterHandler {
     public function route($controller, $id, $res) {
         $resource = new $controller();
 
-        switch ($this->method) {
+        switch($this->method) {
             case "get":
                 if($id && $id == 'create') {
                     $resource->create();
