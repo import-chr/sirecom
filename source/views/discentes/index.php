@@ -24,7 +24,7 @@
             <tbody>
                 <?php foreach ($results as $result): ?>
                     <tr>
-                        <td><?= $result["matricula"] ?></td>
+                        <td data-href="discentes/show/<?= $result["matricula"] ?>"><?= $result["matricula"] ?></td>
                         <td><?= $result["nombre"] ?></td>
                         <td><?= $result["apellido"] ?></td>
                         <td><a class="trash" href="discentes/delete/<?= $result["matricula"] ?>"><i class="fi-sr-trash"></a></td>
@@ -36,5 +36,6 @@
         <a class="url-register" href="discentes/create">Nuevo Discente</a>
     </div>
     <script src="../source/js/delete-alert.js"></script>
+    <script src="../source/js/clickable-rows.js"></script>
 </body>
 </html>

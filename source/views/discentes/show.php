@@ -11,12 +11,12 @@
 <body>
     <div class="container">
         <h1>
-            <?= $result[0]["nombre"] ?>
-            <?= $result[0]["apellido"] ?>
+            <?= $result_null[0]["nombre"] ?>
+            <?= $result_null[0]["apellido"] ?>
         </h1>
 
         <h4>
-            <?= $result[0]["discente_matricula"] ?>
+            <?= $result_null[0]["matricula"] ?>
         </h4>
 
         <table class="content-table">
