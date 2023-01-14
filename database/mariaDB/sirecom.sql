@@ -5,8 +5,8 @@ USE SIRECOM;
 -- Tabla de Discentes
 CREATE TABLE `discentes` (
     `matricula` VARCHAR(10) NOT NULL,
-    `nombre` VARCHAR(25) NOT NULL,
-    `apellido` VARCHAR(25) NOT NULL,
+    `nombre` VARCHAR(50) NOT NULL,
+    `apellido` VARCHAR(50) NOT NULL,
 
     PRIMARY KEY (`matricula`)
 )
@@ -16,8 +16,8 @@ COLLATE=utf8mb4_unicode_ci;
 -- Tabla de Personal Apoyos Didacticos
 CREATE TABLE `apoyos_didacticos` (
     `matricula` VARCHAR(10) NOT NULL,
-    `nombre` VARCHAR(25) NOT NULL,
-    `apellido` VARCHAR(25) NOT NULL,
+    `nombre` VARCHAR(50) NOT NULL,
+    `apellido` VARCHAR(50) NOT NULL,
 
     PRIMARY KEY (`matricula`)
 )
@@ -30,7 +30,7 @@ CREATE TABLE `pc` (
     `discente_matricula` VARCHAR(10) NOT NULL,
     `direccion_MAC` VARCHAR(17) UNIQUE NOT NULL,
     `sistema_operativo` VARCHAR(15) NOT NULL,
-    `procesador` VARCHAR(20) NOT NULL,
+    `procesador` VARCHAR(25) NOT NULL,
     `memoria_RAM` INT NOT NULL,
     `marca` VARCHAR(15) NOT NULL,
     `modelo` VARCHAR(25) NOT NULL,
