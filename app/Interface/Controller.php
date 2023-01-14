@@ -41,7 +41,7 @@ interface Controller {
      * Muestra el formulario para editar un recurso
      * @return void
      */
-    public function edit();
+    public function edit($pk);
         
     /**
      * update
