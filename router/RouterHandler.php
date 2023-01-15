@@ -18,10 +18,6 @@ class RouterHandler {
     public function route($controller, $id, $res) {
         $resource = new $controller();
 
-        // echo "<pre>";
-        // echo var_dump($this->method);
-        // echo "</pre>";
-
         switch($this->method) {
             case "get":
                 if($id && $id == 'create') {
@@ -35,15 +31,21 @@ class RouterHandler {
                 }
                 else if($id && $id == 'edit') {
                     $resource->edit($res);
+                    // echo "<pre>";
+                    // echo var_dump($res);
+                    // echo "</pre>";
                 }
                 else {
                     $resource->index();
                 }
                 break;
             
-            case "post":
+            case "store":
                 $resource->store($this->data);
                 break;
+            
+            case "edit":
+                $resource->update($this->data, $_POST["pk"]);
         }
     }
 
