@@ -63,7 +63,8 @@
                 <input class="type-data" type="text" name="apoyos_matricula" id="apellido_discente" placeholder="<?= $result_null[0]["apoyos_matricula"] ?>">
             </div>
 
-            <input type="hidden" name="method" value="post">
+            <input type="hidden" name="pk" value="<?= $result_null[0]["pc_id"] ?>">
+            <input type="hidden" name="method" value="edit">
 
             <div class="btn-container">
                 <button class="btn" type="submit">Actualizar</button>

@@ -22,7 +22,7 @@
     </header>
     <div class="form-register">
         <h4>Editar Discente</h4>
-        <form action="/sirecom/public/discente" method="post">
+        <form action="/sirecom/public/discentes" method="post">
             <div>
                 <label for="matricula">Matrícula</label>
                 <input class="type-data" id="matricula" type="text" name="matricula" id="matricula_discente" placeholder="<?= $result_null[0]["matricula"] ?>">
@@ -38,7 +38,8 @@
                 <input class="type-data" id="apellido" type="text" name="apellido" id="apellido_discente" placeholder="<?= $result_null[0]["apellido"] ?>">
             </div>
 
-            <input type="hidden" name="method" value="post">
+            <input type="hidden" name="pk" value="<?= $result_null[0]["matricula"] ?>">
+            <input type="hidden" name="method" value="edit">
 
             <div class="btn-container">
                 <button class="btn" type="submit">Actualizar</button>
