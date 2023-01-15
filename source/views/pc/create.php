@@ -68,7 +68,7 @@
                 <input class="type-data" type="text" name="apoyos_matricula" id="apellido_discente">
             </div>
 
-            <input type="hidden" name="method" value="post">
+            <input type="hidden" name="method" value="store">
 
             <div class="btn-container">
                 <button class="btn" type="submit">Guardar</button>

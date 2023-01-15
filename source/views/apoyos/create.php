@@ -38,7 +38,7 @@
                 <input class="type-data" id="apellido" type="text" name="apellido" id="apellido_apoyos" placeholder="">
             </div>
 
-            <input type="hidden" name="method" value="post">
+            <input type="hidden" name="method" value="store">
 
             <div class="btn-container">
                 <button class="btn" type="submit">Guardar</button>
