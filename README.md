@@ -3,7 +3,9 @@
 
 Proyecto de trabajo con bases de datos (mariaDB) y PHP
 
-> Main Branch using xampp-host
+Rama general de pruebas para el funcionamiento del proyecto
+
+> Branch using xampp-host
 
 Registro de equipo personales:
 
