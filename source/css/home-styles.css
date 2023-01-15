@@ -1,25 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+
 :root {
-    --yale-blue: #034c8cff;
-    --bluetiful: #056cf2ff;
-    --azure: #0583f2ff;
-    --harvest-gold: #d9961aff;
-    --goldenrod: #d9a714ff;
-    --cultured: #ecececff;
-
-    --royal-blue-dark: #00296bff;
-    --dark-cornflower-blue: #003f88ff;
-    --usafa-blue: #00509dff;
-    --golden-poppy: #fdc500ff;
-    --gold-web-golden: #ffd500ff;
-
     --good-green: #009879;
+    --good-dark: #343a40;
+    --cultured: #ecececff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     height: 100vh;
-    font-family: "Raleway", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--cultured);
+}
+
+li, a.nav {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cultured);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--good-dark);
+}
+
+.logo {
+    color: var(--cultured);
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo:hover {
+    color: var(--good-green);
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: var(--good-green);
 }
 
 .main-container {
@@ -38,10 +78,14 @@ body {
 
 .mid-container:nth-child(2) {
     grid-area: title;
+    align-self: center;
+    justify-self: center;
 }
 
 .mid-container:nth-child(3) {
     grid-area: main;
+    align-self: center;
+    justify-self: center;
 }
 
 .mid-container:nth-child(4) {
@@ -63,38 +107,47 @@ div.sub-header h1 {
 
 #title > h1 {
     color: var(--good-green);
+    font-weight: 900;
+}
+
+.full-container {
+    height: 100%;
 }
 
 .ref-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    margin: 30px 0;
 }
 
 div.sub-ref {
     display: flex;
-    height: 30%;
+    height: 20%;
+    width: 100%;
     border-style: solid;
-    border-color: gray;
+    border-color: var(--good-dark);
     border-radius: 12px;
     text-align: center;
 }
 
 .linker {
     height: 100%;
+    width: 100%;
     margin: 0;
-    padding: 0 40px 0 40px;
+    padding: 0px 10px;
     text-decoration: none;
-    color: grey;
+    color: var(--good-dark);
 }
 
 .linker > p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 .linker > i {
-    font-size: 7em;
+    font-size: 5em;
 }
 
 .linker:hover {
