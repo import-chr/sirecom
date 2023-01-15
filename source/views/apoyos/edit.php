@@ -45,6 +45,13 @@
                 <button class="btn" type="submit">Actualizar</button>
             </div>
         </form>
+
+        <!-- considering add this
+        <div class="input-group">
+            <input required="" type="text" name="text" autocomplete="off" class="input">
+            <label class="user-label">First Name</label>
+        </div>
+        -->
     </div>
 </body>
 </html>
