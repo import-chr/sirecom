@@ -89,6 +89,10 @@ div.sub-ref {
     text-align: center;
 }
 
+div.sub-ref a p {
+    margin: 0;
+}
+
 .linker {
     height: 100%;
     width: 100%;
