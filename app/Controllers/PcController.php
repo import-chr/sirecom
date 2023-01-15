@@ -89,6 +89,8 @@ class PcController implements Controller {
         $query->bindValue(":pk", $pk);
 
         $query->execute();
+
+        header("location: pc");
     }
 
     public function destroy($pk) {

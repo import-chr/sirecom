@@ -89,6 +89,8 @@ class DiscentesController implements Controller {
         $query->bindValue(":pk", $pk);
         
         $query->execute();
+
+        header("location: discentes");
     }
 
     public function destroy($pk) {

@@ -91,7 +91,7 @@ class ApoyosController implements Controller {
             matricula = :matricula,
             nombre = :nombre,
             apellido = :apellido
-            WHERE matricula = :pk;");
+            WHERE matricula = :pk");
         
         $query->bindValue(":matricula", $data["matricula"]);
         $query->bindValue(":nombre", $data["nombre"]);
@@ -99,6 +99,8 @@ class ApoyosController implements Controller {
         $query->bindValue(":pk", $pk);
 
         $query->execute();
+
+        header("location: apoyos");
     }
 
     public function destroy($pk) {
