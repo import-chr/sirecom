@@ -59,7 +59,15 @@ class PcController implements Controller {
         var_dump($result);
     }
 
-    public function edit() {
+    public function edit($pk) {
+        $query_null = $this->connection->prepare("SELECT * FROM pc WHERE pc_id = :pk");
+        $query_null->execute([
+            ":pk" => $pk
+        ]);
+
+        $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
+
+        require("../source/views/pc/edit.php");
     }
 
     public function update($data, $pk) {

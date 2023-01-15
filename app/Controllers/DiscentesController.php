@@ -66,6 +66,14 @@ class DiscentesController implements Controller {
     }
 
     public function edit($pk) {
+        $query_null = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        $query_null->execute([
+            ":matricula" => $pk
+        ]);
+
+        $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
+
+        require("../source/views/discentes/edit.php");
     }
 
     public function update($data, $pk) {
