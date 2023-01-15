@@ -12,13 +12,14 @@
     <div class="container">
         <h1>Discentes</h1>
 
-        <table class="content-table">
+        <table class="content-table sticky">
             <thead>
                 <tr>
                     <th>Matrícula</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th></th>
+                    <th><i class="fi-sr-trash"></th>
+                    <th><i class="fi-sr-edit"></th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,7 @@
                         <td><?= $result["nombre"] ?></td>
                         <td><?= $result["apellido"] ?></td>
                         <td><a class="trash" href="discentes/delete/<?= $result["matricula"] ?>"><i class="fi-sr-trash"></a></td>
+                        <td><a id="update" class="update" href="discentes/edit/<?= $result["matricula"] ?>"><i class="fi-sr-edit"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

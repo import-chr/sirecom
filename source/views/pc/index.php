@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Computadoras</h1>
 
-        <table class="content-table">
+        <table class="content-table sticky">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -25,7 +25,8 @@
                     <th>Modelo</th>
                     <!-- <tr>Fecha de Registro</tr> -->
                     <th>Matrícula Personal</th>
-                    <th></th>
+                    <th><i class="fi-sr-trash"></th>
+                    <th><i class="fi-sr-edit"></th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                         <!-- <td><?= $result["fecha_registro"] ?></td> -->
                         <td><?= $result["apoyos_matricula"] ?></td>
                         <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
+                        <td><a id="update" class="update" href="pc/edit/<?= $result["pc_id"] ?>"><i class="fi-sr-edit"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
