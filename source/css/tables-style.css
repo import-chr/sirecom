@@ -121,6 +121,10 @@ td[data-href] {
     z-index: 1;
 }
 
+a.url-register {
+    margin: 20px 0;
+}
+
 .url-register::before, .url-register::after {
     content: '';
     display: block;
