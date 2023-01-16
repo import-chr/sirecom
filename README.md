@@ -5,7 +5,7 @@ Proyecto de trabajo con bases de datos (mariaDB) y PHP
 
 Rama general
 
-> Branch using xampp-host
+> Main Branch
 
 Registro de equipo personales:
 
