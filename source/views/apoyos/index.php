@@ -30,8 +30,8 @@
                     <th>Matrícula</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th><i class="fi-sr-trash"></th>
                     <th><i class="fi-sr-edit"></th>
+                    <th><i class="fi-sr-trash"></th>
                 </tr>
             </thead>
             <tbody>
@@ -40,8 +40,8 @@
                         <td data-href="apoyos/show/<?= $result["matricula"] ?>"><?= $result["matricula"] ?></td>
                         <td><?= $result["nombre"] ?></td>
                         <td><?= $result["apellido"] ?></td>
-                        <td><a id="trash" class="trash" href="apoyos/delete/<?= $result["matricula"] ?>"><i class="fi-sr-trash"></a></td>
                         <td><a id="update" class="update" href="apoyos/edit/<?= $result["matricula"] ?>"><i class="fi-sr-edit"></a></td>
+                        <td><a id="trash" class="trash" href="apoyos/delete/<?= $result["matricula"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

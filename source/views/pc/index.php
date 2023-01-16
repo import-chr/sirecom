@@ -36,8 +36,8 @@
                     <th>Modelo</th>
                     <!-- <tr>Fecha de Registro</tr> -->
                     <th>Matrícula Personal</th>
-                    <th><i class="fi-sr-trash"></th>
                     <th><i class="fi-sr-edit"></th>
+                    <th><i class="fi-sr-trash"></th>
                 </tr>
             </thead>
             <tbody>
@@ -53,8 +53,8 @@
                         <td><?= $result["modelo"] ?></td>
                         <!-- <td><?= $result["fecha_registro"] ?></td> -->
                         <td><?= $result["apoyos_matricula"] ?></td>
-                        <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                         <td><a id="update" class="update" href="pc/edit/<?= $result["pc_id"] ?>"><i class="fi-sr-edit"></a></td>
+                        <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
