@@ -3,7 +3,7 @@
 
 Proyecto de trabajo con bases de datos (mariaDB) y PHP
 
-Rama general de pruebas para el funcionamiento del proyecto
+Rama general
 
 > Branch using xampp-host
 
