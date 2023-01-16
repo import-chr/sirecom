@@ -14,9 +14,9 @@
         <a class="nav" href="/sirecom/public"><h3 class="logo">SIRECOM</h3></a>
         <nav>
             <ul class="nav__links">
-                <li><a class="nav" href="discentes">Discentes</a></li>
-                <li><a class="nav" href="pc">Computadoras</a></li>
-                <li><a class="nav" href="apoyos">Apoyos Didácticos</a></li>
+                <li><a class="nav" href="../discentes">Discentes</a></li>
+                <li><a class="nav" href="../pc">Computadoras</a></li>
+                <li><a class="nav" href="../apoyos">Apoyos Didácticos</a></li>
             </ul>
         </nav>
     </header>
