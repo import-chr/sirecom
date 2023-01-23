@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../source/css/tables-style.css">
-    <link rel="stylesheet" href="../source/css/navbar-style.css">
-    <link rel="stylesheet" href="../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/css/tables-style.css">
+    <link rel="stylesheet" href="/css/navbar-style.css">
+    <link rel="stylesheet" href="/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Personal de Apoyos Didácticos</title>
 </head>
 <body>
     <header class="header edge-space mid-container">
-        <a class="nav" href="/sirecom/public"><h3 class="logo">SIRECOM</h3></a>
+        <a class="nav" href="/"><h3 class="logo">SIRECOM</h3></a>
         <nav>
             <ul class="nav__links">
                 <li><a class="nav" href="discentes">Discentes</a></li>
@@ -49,7 +48,7 @@
 
         <a class="url-register" href="apoyos/create">Nuevo Personal</a>
     </div>
-    <script src="../source/js/delete-alert.js"></script>
-    <script src="../source/js/clickable-rows.js"></script>
+    <script src="/js/delete-alert.js"></script>
+    <script src="/js/clickable-rows.js"></script>
 </body>
 </html>
