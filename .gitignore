@@ -4,6 +4,7 @@
 ### Images ###
 /img/
 /source/icons
+/public/icons
 
 # JPEG
 *.jpg
