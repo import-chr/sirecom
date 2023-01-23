@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../source/css/tables-style.css">
     <link rel="stylesheet" href="../source/css/navbar-style.css">
     <link rel="stylesheet" href="../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Personal de Apoyos Didácticos</title>
 </head>
 <body>
