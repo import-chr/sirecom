@@ -9,7 +9,7 @@ class Connection {
     private static $instance;
     private $connection;
 
-    private $server = "localhost";
+    private $server = "10.21.34.101";
     private $database = "SIRECOM";
     private $username = "chrlr";
     private $password = "root";
