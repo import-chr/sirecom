@@ -17,3 +17,8 @@ vim /etc/apache2/apache2.conf
 	AllowOverride All
 	Require all granted
 </Directory>
+
+RUTAS ARCHIVOS conf
+C:/xampp/apache/conf/extra
+C:/xampp/apache/conf
+C:/Windows/System32/drivers/etc
