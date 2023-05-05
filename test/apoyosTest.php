@@ -6,13 +6,13 @@ use App\Controllers\ApoyosController;
 
 $apoyos_controller = new ApoyosController;
 
-$apoyos_controller->store([
-    "matricula" => "A-10085643",
-    "nombre" => "Paola",
-    "apellido" => "Hernandez"
-]);
+// $apoyos_controller->store([
+//     "matricula" => "A-10085643",
+//     "nombre" => "Paola",
+//     "apellido" => "Hernandez"
+// ]);
 
-// $apoyos_controller->index();
+$apoyos_controller->index();
 
 // $apoyos_controller->show("A-10059375");
 
