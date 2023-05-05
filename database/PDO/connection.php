@@ -9,9 +9,10 @@ class Connection {
     private static $instance;
     private $connection;
 
-    private $server = "10.21.34.101";
-    private $database = "SIRECOM";
-    private $username = "chrlr";
+    private $server = "localhost";
+    private $database = "sirecom";
+    private $port = "5432";
+    private $username = "postgres";
     private $password = "root";
     
     /**
@@ -48,13 +49,15 @@ class Connection {
      */
     private function make_connection() {
         try {
-            $connect = new \PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
+            $connect = new \PDO("pgsql:host=$this->server;port=$this->port;dbname=$this->database", $this->username, $this->password);
 
             $setnames = $connect->prepare("SET NAMES 'utf8'");
             $setnames->execute();
 
             $this->connection = $connect;
-        
+
+            // var_dump($this->connection);
+
             // echo "Conexion exitosa";
         } catch(PDOException $e) {
             // echo "Conexion fallida {$e->getMessage()}";
