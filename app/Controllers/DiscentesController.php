@@ -15,7 +15,7 @@ class DiscentesController implements Controller {
     }
 
     public function index() {
-        $query = $this->connection->prepare("SELECT * FROM discentes");
+        $query = $this->connection->prepare("SELECT * FROM discente");
         $query->execute();
 
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -29,11 +29,12 @@ class DiscentesController implements Controller {
     }
 
     public function store($data) {
-        $query = $this->connection->prepare("INSERT INTO discentes (matricula, nombre, apellido) VALUES (:matricula, :nombre, :apellido)");
+        $query = $this->connection->prepare("INSERT INTO discente (matricula, nombre, apellidop, apellidom) VALUES (:matricula, :nombre, :apellidop, :apellidom)");
 
         $query->bindValue(":matricula", $data["matricula"]);
         $query->bindValue(":nombre", $data["nombre"]);
-        $query->bindValue(":apellido", $data["apellido"]);
+        $query->bindValue(":apellidop", $data["apellidop"]);
+        $query->bindValue(":apellidom", $data["apellidom"]);
 
         $query->execute();
 
@@ -41,18 +42,22 @@ class DiscentesController implements Controller {
     }
 
     public function show($pk) {
-        $query_null = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        $query_null = $this->connection->prepare("SELECT * FROM discente WHERE matricula = :matricula");
         $query_null->execute([
             ":matricula" => $pk
         ]);
 
-        $query = $this->connection->prepare("SELECT *
-                                            FROM pc, discentes
-                                            WHERE pc.discente_matricula = discentes.matricula
-                                            AND pc.discente_matricula IN (
-                                                SELECT matricula
-                                                FROM discentes
-                                                WHERE matricula = :matricula)");
+        $query = $this->connection->prepare("SELECT
+                                            registro.fecha_registro,
+                                            pc.direccion_mac, pc.sis_op, pc.procesador,
+                                            pc.ram_gb, pc.marca, pc.modelo,
+                                            discente.nombre, discente.matricula
+                                            FROM pc
+                                            INNER JOIN registro
+                                            ON pc.id_pc = registro.id_pc
+                                            INNER JOIN discente
+                                            ON registro.id_dis = discente.id_dis
+                                            WHERE discente.matricula = :matricula");
         $query->execute([
             ":matricula" => $pk
         ]);
@@ -66,7 +71,7 @@ class DiscentesController implements Controller {
     }
 
     public function edit($pk) {
-        $query_null = $this->connection->prepare("SELECT * FROM discentes WHERE matricula = :matricula");
+        $query_null = $this->connection->prepare("SELECT * FROM discente WHERE matricula = :matricula");
         $query_null->execute([
             ":matricula" => $pk
         ]);
@@ -77,15 +82,17 @@ class DiscentesController implements Controller {
     }
 
     public function update($data, $pk) {
-        $query = $this->connection->prepare("UPDATE discentes SET
+        $query = $this->connection->prepare("UPDATE discente SET
             matricula = :matricula,
             nombre = :nombre,
-            apellido = :apellido
+            apellidop = :apellidop
+            apellidom = :apellidom
             WHERE matricula = :pk;");
         
         $query->bindValue(":matricula", $data["matricula"]);
         $query->bindValue(":nombre", $data["nombre"]);
-        $query->bindValue(":apellido", $data["apellido"]);
+        $query->bindValue(":apellidop", $data["apellidop"]);
+        $query->bindValue(":apellidom", $data["apellidom"]);
         $query->bindValue(":pk", $pk);
         
         $query->execute();
@@ -94,7 +101,7 @@ class DiscentesController implements Controller {
     }
 
     public function destroy($pk) {
-        $query = $this->connection->prepare("DELETE FROM discentes WHERE matricula = :matricula");
+        $query = $this->connection->prepare("DELETE FROM discente WHERE matricula = :matricula");
         $query->execute([
             ":matricula" => $pk
         ]);
