@@ -76,10 +76,10 @@ class PcController implements Controller {
                                             modelo = :modelo
                                             WHERE id_pc = :pk;");
 
-        $query->bindValue(":direccion_MAC", $data["direccion_MAC"]);
-        $query->bindValue(":sistema_operativo", $data["sistema_operativo"]);
+        $query->bindValue(":direccion_mac", $data["direccion_mac"]);
+        $query->bindValue(":sis_op", $data["sis_op"]);
         $query->bindValue(":procesador", $data["procesador"]);
-        $query->bindValue(":memoria_RAM", $data["memoria_RAM"]);
+        $query->bindValue(":ram_gb", $data["ram_gb"]);
         $query->bindValue(":marca", $data["marca"]);
         $query->bindValue(":modelo", $data["modelo"]);
         $query->bindValue(":pk", $pk);
