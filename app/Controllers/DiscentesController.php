@@ -85,7 +85,7 @@ class DiscentesController implements Controller {
         $query = $this->connection->prepare("UPDATE discente SET
             matricula = :matricula,
             nombre = :nombre,
-            apellidop = :apellidop
+            apellidop = :apellidop,
             apellidom = :apellidom
             WHERE matricula = :pk;");
         
