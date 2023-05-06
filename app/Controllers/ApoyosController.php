@@ -20,11 +20,11 @@ class ApoyosController implements Controller {
 
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
         var_dump($results);
-        // require("../source/views/apoyos/index.php");
+        require("../source/views/apoyos/index.php");
     }
 
     public function create() {
-        // require("../source/views/apoyos/create.php");
+        require("../source/views/apoyos/create.php");
     }
 
     public function store($data) {
@@ -37,7 +37,7 @@ class ApoyosController implements Controller {
 
         $query->execute();
 
-        // header("location: apoyos");
+        header("location: apoyos");
     }
 
     public function show($pk) {
@@ -65,7 +65,7 @@ class ApoyosController implements Controller {
         $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        // require("../source/views/apoyos/show.php");
+        require("../source/views/apoyos/show.php");
 
         // echo "<pre>";
         // var_dump($result_null);
@@ -80,14 +80,14 @@ class ApoyosController implements Controller {
 
         $result_null = $query_null->fetchAll(PDO::FETCH_ASSOC);
 
-        // require("../source/views/apoyos/edit.php");
+        require("../source/views/apoyos/edit.php");
     }
 
     public function update($data, $pk) {
         $query = $this->connection->prepare("UPDATE admin SET
             matricula = :matricula,
             nombre = :nombre,
-            apellidop = :apellidop
+            apellidop = :apellidop,
             apellidom = :apellidom
             WHERE matricula = :pk");
         
@@ -99,7 +99,7 @@ class ApoyosController implements Controller {
 
         $query->execute();
 
-        // header("location: apoyos");
+        header("location: apoyos");
     }
 
     public function destroy($pk) {
@@ -108,6 +108,6 @@ class ApoyosController implements Controller {
             ":matricula" => $pk
         ]);
 
-        // header("location: ../../apoyos");
+        header("location: ../../apoyos");
     }
 }

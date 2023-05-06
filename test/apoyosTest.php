@@ -7,19 +7,21 @@ use App\Controllers\ApoyosController;
 $apoyos_controller = new ApoyosController;
 
 // $apoyos_controller->store([
-//     "matricula" => "A-10085643",
-//     "nombre" => "Paola",
-//     "apellido" => "Hernandez"
+//     "matricula" => "C-4523687",
+//     "nombre" => "Juan",
+//     "apellidop" => "Hernandez",
+//     "apellidom" => "Gomez"
 // ]);
 
 $apoyos_controller->index();
 
-// $apoyos_controller->show("A-10059375");
+// $apoyos_controller->show("C-4523687");
 
 // $apoyos_controller->update([
-//     "matricula" => "A-10059375",
-//     "nombre" => "Paola",
-//     "apellido" => "Martinez"
-// ], "A-10061486");
+//     "matricula" => "C-4523687",
+//     "nombre" => "David",
+//     "apellidop" => "Hernandez",
+//     "apellidom" => "Gonzalez"
+// ], "C-4523687");
 
-// $apoyos_controller->destroy("A-10059375");
+// $apoyos_controller->destroy("C-4523687");
