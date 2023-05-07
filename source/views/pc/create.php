@@ -24,18 +24,13 @@
         <h4>Nueva Computadora</h4>
         <form action="/sirecom/public/pc" method="post">
             <div>
-                <label for="discente_matricula">Matrícula Discente</label>
-                <input class="type-data" type="text" name="discente_matricula" id="dis-mtr">
+                <label for="direccion_mac">Dirección MAC</label>
+                <input class="type-data" type="text" name="direccion_mac" id="mac-addr">
             </div>
 
             <div>
-                <label for="direccion_MAC">Dirección MAC</label>
-                <input class="type-data" type="text" name="direccion_MAC" id="mac-addr">
-            </div>
-
-            <div>
-                <label for="sistema_operativo">Sistema Operativo</label>
-                <input class="type-data" type="text" name="sistema_operativo" id="so">
+                <label for="sis_op">Sistema Operativo</label>
+                <input class="type-data" type="text" name="sis_op" id="so">
             </div>
 
             <div>
@@ -44,8 +39,8 @@
             </div>
 
             <div>
-                <label for="memoria_RAM">Memoria RAM</label>
-                <input class="type-data" type="text" name="memoria_RAM" id="ram">
+                <label for="ram_gb">Memoria RAM</label>
+                <input class="type-data" type="text" name="ram_gb" id="ram">
             </div>
 
             <div>
@@ -62,12 +57,6 @@
                 <label for="fecha_registro">Fecha</label>
                 <input type="text" name="fecha_registro" id="date">
             </div> -->
-
-            <div>
-                <label for="apoyos_matricula">Matrícula Personal</label>
-                <input class="type-data" type="text" name="apoyos_matricula" id="apellido_discente">
-            </div>
-
             <input type="hidden" name="method" value="store">
 
             <div class="btn-container">

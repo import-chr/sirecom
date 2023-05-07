@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,6 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Matrícula Discente</th>
                     <th>Dirección MAC</th>
                     <th>Sistema Operativo</th>
                     <th>Procesador</th>
@@ -35,7 +34,6 @@
                     <th>Marca</th>
                     <th>Modelo</th>
                     <!-- <tr>Fecha de Registro</tr> -->
-                    <th>Matrícula Personal</th>
                     <th><i class="fi-sr-edit"></th>
                     <th><i class="fi-sr-trash"></th>
                 </tr>
@@ -43,16 +41,14 @@
             <tbody>
                 <?php foreach ($results as $result): ?>
                     <tr>
-                        <td><?= $result["pc_id"] ?></td>
-                        <td><?= $result["discente_matricula"] ?></td>
-                        <td><?= $result["direccion_MAC"] ?></td>
-                        <td><?= $result["sistema_operativo"] ?></td>
+                        <td><?= $result["id_pc"] ?></td>
+                        <td><?= $result["direccion_mac"] ?></td>
+                        <td><?= $result["sis_op"] ?></td>
                         <td><?= $result["procesador"] ?></td>
-                        <td><?= $result["memoria_RAM"] ?></td>
+                        <td><?= $result["ram_gb"] ?></td>
                         <td><?= $result["marca"] ?></td>
                         <td><?= $result["modelo"] ?></td>
                         <!-- <td><?= $result["fecha_registro"] ?></td> -->
-                        <td><?= $result["apoyos_matricula"] ?></td>
                         <td><a id="update" class="update" href="pc/edit/<?= $result["pc_id"] ?>"><i class="fi-sr-edit"></a></td>
                         <td><a class="trash" href="pc/delete/<?= $result["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>

@@ -24,18 +24,13 @@
         <h4>Editar Computadora</h4>
         <form action="/sirecom/public/pc" method="post">
             <div>
-                <label for="discente_matricula">Matrícula Discente</label>
-                <input class="type-data" type="text" name="discente_matricula" id="dis-mtr" placeholder="<?= $result_null[0]["discente_matricula"] ?>">
+                <label for="direccion_mac">Dirección MAC</label>
+                <input class="type-data" type="text" name="direccion_mac" id="mac-addr" placeholder="<?= $result_null[0]["direccion_mac"] ?>">
             </div>
 
             <div>
-                <label for="direccion_MAC">Dirección MAC</label>
-                <input class="type-data" type="text" name="direccion_MAC" id="mac-addr" placeholder="<?= $result_null[0]["direccion_MAC"] ?>">
-            </div>
-
-            <div>
-                <label for="sistema_operativo">Sistema Operativo</label>
-                <input class="type-data" type="text" name="sistema_operativo" id="so" placeholder="<?= $result_null[0]["sistema_operativo"] ?>">
+                <label for="sis_op">Sistema Operativo</label>
+                <input class="type-data" type="text" name="sis_op" id="so" placeholder="<?= $result_null[0]["sis_op"] ?>">
             </div>
 
             <div>
@@ -44,8 +39,8 @@
             </div>
 
             <div>
-                <label for="memoria_RAM">Memoria RAM</label>
-                <input class="type-data" type="text" name="memoria_RAM" id="ram" placeholder="<?= $result_null[0]["memoria_RAM"] ?>">
+                <label for="ram_gb">Memoria RAM</label>
+                <input class="type-data" type="text" name="ram_gb" id="ram" placeholder="<?= $result_null[0]["ram_gb"] ?>">
             </div>
 
             <div>
@@ -58,12 +53,7 @@
                 <input class="type-data" type="text" name="modelo" id="modelo" placeholder="<?= $result_null[0]["modelo"] ?>">
             </div>
 
-            <div>
-                <label for="apoyos_matricula">Matrícula Personal</label>
-                <input class="type-data" type="text" name="apoyos_matricula" id="apellido_discente" placeholder="<?= $result_null[0]["apoyos_matricula"] ?>">
-            </div>
-
-            <input type="hidden" name="pk" value="<?= $result_null[0]["pc_id"] ?>">
+            <input type="hidden" name="pk" value="<?= $result_null[0]["id_pc"] ?>">
             <input type="hidden" name="method" value="edit">
 
             <div class="btn-container">
