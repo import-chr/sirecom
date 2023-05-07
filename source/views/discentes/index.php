@@ -28,7 +28,8 @@
                 <tr>
                     <th>Matrícula</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
                     <th><i class="fi-sr-edit"></th>
                     <th><i class="fi-sr-trash"></th>
                 </tr>
@@ -38,7 +39,8 @@
                     <tr>
                         <td data-href="discentes/show/<?= $result["matricula"] ?>"><?= $result["matricula"] ?></td>
                         <td><?= $result["nombre"] ?></td>
-                        <td><?= $result["apellido"] ?></td>
+                        <td><?= $result["apellidop"] ?></td>
+                        <td><?= $result["apellidom"] ?></td>
                         <td><a id="update" class="update" href="discentes/edit/<?= $result["matricula"] ?>"><i class="fi-sr-edit"></a></td>
                         <td><a class="trash" href="discentes/delete/<?= $result["matricula"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>

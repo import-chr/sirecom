@@ -23,7 +23,8 @@
     <div class="container">
         <h1>
             <?= $result_null[0]["nombre"] ?>
-            <?= $result_null[0]["apellido"] ?>
+            <?= $result_null[0]["apellidop"] ?>
+            <?= $result_null[0]["apellidom"] ?>
         </h1>
 
         <h4>
@@ -34,7 +35,6 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Matrícula Discente</th>
                     <th>Dirección MAC</th>
                     <th>Sistema Operativo</th>
                     <th>Procesador</th>
@@ -48,16 +48,15 @@
             <tbody>
                 <?php foreach ($result as $res): ?>
                     <tr>
-                        <td><?= $res["pc_id"] ?></td>
-                        <td><?= $res["discente_matricula"] ?></td>
-                        <td><?= $res["direccion_MAC"] ?></td>
-                        <td><?= $res["sistema_operativo"] ?></td>
+                        <td><?= $res["id_pc"] ?></td>
+                        <td><?= $res["direccion_mac"] ?></td>
+                        <td><?= $res["sis_op"] ?></td>
                         <td><?= $res["procesador"] ?></td>
-                        <td><?= $res["memoria_RAM"] ?></td>
+                        <td><?= $res["ram_gb"] ?></td>
                         <td><?= $res["marca"] ?></td>
                         <td><?= $res["modelo"] ?></td>
                         <!-- <td><?= $res["fecha_registro"] ?></td> -->
-                        <td><a class="trash" href="pc/delete/<?= $res["pc_id"] ?>"><i class="fi-sr-trash"></a></td>
+                        <td><a class="trash" href="pc/delete/<?= $res["id_pc"] ?>"><i class="fi-sr-trash"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
