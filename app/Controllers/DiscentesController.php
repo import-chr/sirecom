@@ -48,7 +48,7 @@ class DiscentesController implements Controller {
         ]);
 
         $query = $this->connection->prepare("SELECT
-                                            registro.fecha_registro,
+                                            pc.id_pc, registro.fecha_registro,
                                             pc.direccion_mac, pc.sis_op, pc.procesador,
                                             pc.ram_gb, pc.marca, pc.modelo,
                                             discente.nombre, discente.matricula
