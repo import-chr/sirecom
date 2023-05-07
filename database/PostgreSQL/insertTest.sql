@@ -1,7 +1,7 @@
 USE sirecom;
 
 -- insercion en discentes
-INSERT INTO discente (matricula, nombre, apellidom, apellidop) VALUES
+INSERT INTO discente (matricula, nombre, apellidop, apellidom) VALUES
 -- ICI A
 ('A-10045358', 'Teresa', 'Morales', 'Vega'),
 ('D-5471240', 'Yael', 'Salgado', 'Sánchez'),
@@ -14,7 +14,7 @@ INSERT INTO discente (matricula, nombre, apellidom, apellidop) VALUES
 ('A-10061116', 'Kenia Elizabeth', 'Rodríguez', 'Moreno');
 
 -- insercion en apoyos_didacticos
-INSERT INTO admin (matricula, nombre, apellidom, apellidop) VALUES
+INSERT INTO admin (matricula, nombre, apellidop, apellidom) VALUES
 ('A-10081143', 'Paola', 'Hernandez', 'Cruz'),
 ('C-9656115', 'Jesus', 'Montes', 'Diaz');
 
