@@ -1,9 +1,28 @@
+<?php
+
+session_start();
+
+// Verificar si el botón de "Cerrar sesión" ha sido presionado
+if(isset($_POST['logout'])) {
+    // Destruir todas las variables de sesión
+    session_unset();
+    
+    // Destruir la sesión
+    session_destroy();
+    
+    // Redireccionar a la página de inicio de sesión o a otra página deseada
+    header("Location: /sirecom/source/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../source/img/EMI.png" type="image/png">
     <link rel="stylesheet" href="../../../source/css/form-style.css">
     <link rel="stylesheet" href="../../../source/css/navbar-style.css">
     <link rel="stylesheet" href="../../../source/css/buttons-style.css">
@@ -19,28 +38,31 @@
                 <li><a class="nav" href="../../apoyos">Apoyos Didácticos</a></li>
             </ul>
         </nav>
+        <form method="post" action="">
+            <button type="submit" name="logout" class="btn">Cerrar sesión</button>
+        </form>
     </header>
     <div class="form-register">
         <h4>Editar Discente</h4>
         <form action="/sirecom/public/discentes" method="post">
             <div>
                 <label for="matricula">Matrícula</label>
-                <input class="type-data" type="text" name="matricula" id="matricula matricula_discente" placeholder="<?= $result_null[0]["matricula"] ?>">
+                <input class="type-data" type="text" name="matricula" id="matricula matricula_discente" value="<?= $result_null[0]["matricula"] ?>">
             </div>
 
             <div>
                 <label for="nombre">Nombre</label>
-                <input class="type-data" type="text" name="nombre" id="nombre nombre_discente" placeholder="<?= $result_null[0]["nombre"] ?>">
+                <input class="type-data" type="text" name="nombre" id="nombre nombre_discente" value="<?= $result_null[0]["nombre"] ?>">
             </div>
 
             <div>
                 <label for="apellido">Apellido Paterno</label>
-                <input class="type-data" type="text" name="apellidop" id="apellidop apellido_discente" placeholder="<?= $result_null[0]["apellidop"] ?>">
+                <input class="type-data" type="text" name="apellidop" id="apellidop apellido_discente" value="<?= $result_null[0]["apellidop"] ?>">
             </div>
             
             <div>
                 <label for="apellido">Apellido Materno</label>
-                <input class="type-data" type="text" name="apellidom" id="apellidom apellido_discente" placeholder="<?= $result_null[0]["apellidom"] ?>">
+                <input class="type-data" type="text" name="apellidom" id="apellidom apellido_discente" value="<?= $result_null[0]["apellidom"] ?>">
             </div>
 
             <input type="hidden" name="pk" value="<?= $result_null[0]["matricula"] ?>">

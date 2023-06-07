@@ -1,11 +1,31 @@
+<?php
+
+session_start();
+
+// Verificar si el botón de "Cerrar sesión" ha sido presionado
+if(isset($_POST['logout'])) {
+    // Destruir todas las variables de sesión
+    session_unset();
+    
+    // Destruir la sesión
+    session_destroy();
+    
+    // Redireccionar a la página de inicio de sesión o a otra página deseada
+    header("Location: /sirecom/source/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../source/img/EMI.png" type="image/png">
     <link rel="stylesheet" href="../source/css/tables-style.css">
     <link rel="stylesheet" href="../source/css/navbar-style.css">
+    <link rel="stylesheet" href="../source/css/buttons-style.css">
     <link rel="stylesheet" href="../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Discentes</title>
 </head>
@@ -19,6 +39,9 @@
                 <li><a class="nav" href="apoyos">Apoyos Didácticos</a></li>
             </ul>
         </nav>
+        <form method="post" action="">
+            <button type="submit" name="logout" class="btn">Cerrar sesión</button>
+        </form>
     </header>
     <div class="container">
         <h1>Discentes</h1>
