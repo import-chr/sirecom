@@ -24,9 +24,14 @@ $router = new RouterHandler;
 switch($resource) {
     case '/':
         // echo "HOME PAGE";
-        require("../source/views/home.html");
+        require("../source/views/home.php");
         break;
     
+    // case 'login':
+    //     // echo "LOGIN";
+    //     require("../source/login.php");
+    //     break;
+
     case 'discentes':
         // echo "DISCENTES PAGE";
         $method = $_POST["method"] ?? "get";
