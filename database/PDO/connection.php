@@ -11,8 +11,7 @@ class Connection {
 
     private $server = "localhost";
     private $database = "sirecom";
-    private $port = "5432";
-    private $username = "postgres";
+    private $username = "root";
     private $password = "root";
     
     /**
@@ -49,7 +48,7 @@ class Connection {
      */
     private function make_connection() {
         try {
-            $connect = new \PDO("pgsql:host=$this->server;port=$this->port;dbname=$this->database", $this->username, $this->password);
+            $connect = new \PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
 
             $setnames = $connect->prepare("SET NAMES 'utf8'");
             $setnames->execute();
