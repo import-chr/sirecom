@@ -2,6 +2,14 @@
 
 session_start();
 
+// var_dump(session_status());
+// var_dump($_SESSION['usuario']);
+// var_dump($_SESSION['clave']);
+
+$userLogged = $_SESSION['usuario'];
+
+// var_dump($userLogged);
+
 // Verificar si el botón de "Cerrar sesión" ha sido presionado
 if(isset($_POST['logout'])) {
     // Destruir todas las variables de sesión
@@ -34,15 +42,18 @@ if(isset($_POST['logout'])) {
     <link rel="stylesheet" href="../icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Inicio</title>
 </head>
-<body>
-    <!-- <script>
+
+<!-- <script>
+    const sesLog = <?= $userLogged ?>
     swal({
-        title: 'Bienvenido',
+        title: 'Bienvenido' + sesLog,
         text: 'Has ingresado a tu cuenta',
         icon: 'success',
         button: 'Continuar',
     });
-    </script> -->
+</script> -->
+
+<body>
     <div class="main-container">
         <header class="header edge-space mid-container">
             <h3 class="logo">SIRECOM</h3>
@@ -59,6 +70,9 @@ if(isset($_POST['logout'])) {
         </header>
 
         <div class="title-container mid-container sub-header">
+            <div class="logo-emi">
+                <img src="../source/img/EMI.png" alt="emi-logo">
+            </div>
             <div id="title">
                 <h1 class="title glitched">SIRECOM</h1>
             </div>
