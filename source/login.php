@@ -23,7 +23,7 @@ $password = "root";
 session_start();
 
 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    header('Location: /sirecom/public/');
+    header('Location: /sirecom/public');
     exit();
 }
 
@@ -43,15 +43,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($resultLog) {
         // Establecer una variable de sesión para indicar que el usuario ha iniciado sesión
         $_SESSION['logged_in'] = true;
-
+        $_SESSION['usuario'] = $_REQUEST['user'];
+        // $_SESSION['clave'] = $_REQUEST['pass'];
         // Redirigir a la ruta deseada
         header('Location: /sirecom/public');
         exit();
     } else {
-        // Credenciales inválidas, mostrar un mensaje de error
-        // echo "<script>
-        //         alert('Verifica tus datos');
-        //     </script>";
     }
 }
 
@@ -73,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
 
-        <?php if(isset($resultLog)): ?>
+        <!-- <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
             <script>
                 swal({
                     title: 'Bienvenido',
@@ -82,7 +79,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     button: 'Continuar',
                 });
             </script>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
         <?php if(isset($resultLog) && !$resultLog): ?>
             <script>
