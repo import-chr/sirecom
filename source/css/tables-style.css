@@ -116,7 +116,7 @@ td[data-href] {
     font-size: 17px;
     border: 1px solid;
     font-family: inherit;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--color);
     z-index: 1;
 }
