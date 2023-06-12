@@ -71,7 +71,7 @@ if(isset($_POST['logout'])) {
             </tbody>
         </table>
 
-        <a class="url-register" href="discentes/create">Nuevo Discente</a>
+        <a class="url-register" href="discentes/create"><span class="fi-sr-add-document"> Nuevo Discente</span></a>
     </div>
     <script src="../source/js/delete-alert.js"></script>
     <script src="../source/js/clickable-rows.js"></script>

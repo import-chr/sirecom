@@ -79,7 +79,7 @@ if(isset($_POST['logout'])) {
             </tbody>
         </table>
 
-        <a class="url-register" href="pc/create">Nueva Computadora</a>
+        <a class="url-register" href="pc/create"><span class="fi-sr-add-document"> Nueva Computadora</span></a>
     </div>
     <script src="../source/js/delete-alert.js"></script>
 </body>
