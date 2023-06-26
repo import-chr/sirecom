@@ -2,6 +2,8 @@
 
 session_start();
 
+$userLogged = $_SESSION['usuario'];
+
 // Verificar si el botón de "Cerrar sesión" ha sido presionado
 if(isset($_POST['logout'])) {
     // Destruir todas las variables de sesión
@@ -26,6 +28,7 @@ if(isset($_POST['logout'])) {
     <link rel="stylesheet" href="../../source/css/form-style.css">
     <link rel="stylesheet" href="../../source/css/navbar-style.css">
     <link rel="stylesheet" href="../../source/css/buttons-style.css">
+    <link rel="stylesheet" href="../../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Nueva Computadora</title>
 </head>
 <body>
@@ -33,9 +36,10 @@ if(isset($_POST['logout'])) {
         <a class="nav" href="/sirecom/public"><h3 class="logo">SIRECOM</h3></a>
         <nav>
             <ul class="nav__links">
-                <li><a class="nav" href="discentes">Discentes</a></li>
-                <li><a class="nav" href="pc">Computadoras</a></li>
-                <li><a class="nav" href="apoyos">Apoyos Didácticos</a></li>
+                <li><a class="nav" href="/sirecom/public/discentes">Discentes</a></li>
+                <li><a class="nav" href="/sirecom/public/pc">Computadoras</a></li>
+                <li><a class="nav" href="/sirecom/public/apoyos">Apoyos Didácticos</a></li>
+                <li class="profile"><span class="fi-sr-user"> </span><?= $userLogged ?></li>
             </ul>
         </nav>
         <form method="post" action="">

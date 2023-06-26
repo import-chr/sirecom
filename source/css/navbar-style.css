@@ -60,3 +60,7 @@ header:hover {
 .nav__links li a:hover {
     color: var(--good-green);
 }
+
+.nav__links .profile {
+    color: var(--good-green);
+}

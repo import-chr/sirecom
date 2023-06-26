@@ -2,6 +2,8 @@
 
 session_start();
 
+$userLogged = $_SESSION['usuario'];
+
 // Verificar si el botón de "Cerrar sesión" ha sido presionado
 if(isset($_POST['logout'])) {
     // Destruir todas las variables de sesión
@@ -26,6 +28,7 @@ if(isset($_POST['logout'])) {
     <link rel="stylesheet" href="../../source/css/form-style.css">
     <link rel="stylesheet" href="../../source/css/navbar-style.css">
     <link rel="stylesheet" href="../../source/css/buttons-style.css">
+    <link rel="stylesheet" href="../../source/icons/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <title>Nuevo Personal</title>
 </head>
 <body>
@@ -36,6 +39,7 @@ if(isset($_POST['logout'])) {
                 <li><a class="nav" href="../discentes">Discentes</a></li>
                 <li><a class="nav" href="../pc">Computadoras</a></li>
                 <li><a class="nav" href="../apoyos">Apoyos Didácticos</a></li>
+                <li class="profile"><span class="fi-sr-user"> </span><?= $userLogged ?></li>
             </ul>
         </nav>
         <form method="post" action="">
@@ -56,8 +60,13 @@ if(isset($_POST['logout'])) {
             </div>
 
             <div>
-                <label for="apellido">Apellido</label>
-                <input class="type-data" id="apellido" type="text" name="apellido" id="apellido_apoyos" placeholder="">
+                <label for="apellido">Apellido Paterno</label>
+                <input class="type-data" id="apellidop" type="text" name="apellidop" id="apellido_apoyos" placeholder="">
+            </div>
+
+            <div>
+                <label for="apellido">Apellido Materno</label>
+                <input class="type-data" id="apellidom" type="text" name="apellidom" id="apellido_apoyos" placeholder="">
             </div>
 
             <input type="hidden" name="method" value="store">

@@ -131,3 +131,7 @@ div.sub-ref:hover {
     border-color: var(--good-green);
     background-color: var(--cultured);
 }
+
+.nav__links .profile {
+    color: var(--good-green);
+}

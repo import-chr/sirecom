@@ -62,6 +62,7 @@ if(isset($_POST['logout'])) {
                     <li><a class="nav" href="discentes">Discentes</a></li>
                     <li><a class="nav" href="pc">Computadoras</a></li>
                     <li><a class="nav" href="apoyos">Apoyos Didácticos</a></li>
+                    <li class="profile"><span class="fi-sr-user"> </span><?= $userLogged ?></li>
                 </ul>
             </nav>
             <form method="post" action="">
